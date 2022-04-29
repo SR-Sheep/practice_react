@@ -8,7 +8,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Subject/>
+        <Subject title = "동물" sub="고양이"/>
         <Toc/>
         <Content/>
       </div>
