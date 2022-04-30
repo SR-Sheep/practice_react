@@ -48,7 +48,13 @@ class App extends Component {
           }
           .bind(this)
         }/>
-        <Toc data={this.state.content}/>
+        <Toc data={this.state.content} onChangePage={function(){
+          if(this.state.mode === 'welcome'){
+            this.setState({mode:"read"}); //state는 바로 바꿀 수 없고, setter를 이용해야 함
+          }else{
+            this.setState({mode:"welcome"}); //state는 바로 바꿀 수 없고, setter를 이용해야 함
+          }
+        }.bind(this)}/>
         <Content title={_title} desc={_desc}/>
         <span>{_title} / {_desc}</span>
         <button type='submit' onClick={
