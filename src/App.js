@@ -38,7 +38,16 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Subject title = {this.state.subject.title} sub={this.state.subject.sub}/>
+        <Subject title = {this.state.subject.title} sub={this.state.subject.sub}
+          onChangePage={function(){
+            if(this.state.mode === 'welcome'){
+              this.setState({mode:"read"}); //state는 바로 바꿀 수 없고, setter를 이용해야 함
+            }else{
+              this.setState({mode:"welcome"}); //state는 바로 바꿀 수 없고, setter를 이용해야 함
+            }
+          }
+          .bind(this)
+        }/>
         <Toc data={this.state.content}/>
         <Content title={_title} desc={_desc}/>
         <span>{_title} / {_desc}</span>
