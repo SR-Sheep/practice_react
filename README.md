@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# 생활코딩! React 프로그래밍 책을 따라한 실습 자료 입니다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 왜 시작하게 됐나요?
 
-## Available Scripts
-
-In the project directory, you can run:
+스프링 부트를 이용하여 백엔드 설계방법을 배우다 자연스럽게 프론트엔드에 대해 학습하게 되었습니다.
+주어진 학습 자료에서는 React와 mui-material을 사용하였는데, 이론적인 면이 부족한 부분이 있었습니다.
+또 리액트가 업데이트 되면서 좀 더 최신 문법에 적응하고자 시작하게 되었습니다.
 
 ### `npm start`
 
