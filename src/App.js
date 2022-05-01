@@ -3,9 +3,10 @@ import { Component } from 'react';
 import Subject from './Subject';
 import Toc from './Toc';
 import Content from './Content';
+import Tmp from './Tmp';
 
 class App extends Component {
-
+  
   constructor(props){
     super(props);
     this.state={
@@ -71,6 +72,7 @@ class App extends Component {
             }
             .bind(this)
         }>mode 변경</button>
+        <Tmp/>
       </div>
     );
   }
