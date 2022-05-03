@@ -1,4 +1,33 @@
 .func{
     margin: 20px;
-    border: 3px palevioletred solid;
+    padding: 10px;
+    border: 3px rgb(48, 203, 255) solid;
+    width: 300px;
+
+    text-align: center;
+}
+
+.func input{
+    margin: 10px;
+}
+
+.func .print{
+    margin : auto;
+    text-align: left;
+}
+
+.func span{
+    font-size: 14px;
+}
+
+.func button{
+    cursor: pointer;
+    margin: 20px;
+    background-color: #424242;
+    color: aliceblue;
+    transition: .2s ease;
+}
+
+.func button:hover{
+    transform: scale(1.1);
 }

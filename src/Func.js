@@ -1,25 +1,40 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState,useRef } from "react";
 
 function Func(){
-    const [text, setText]=useState('');
+    //선언
+    const [inputs, setInputs]=useState({
+        nickname : '',
+        name : ''
+    });
+    //값 추출
+    const {name,nickname} = inputs;
+
     //입력값 출력
     const onChange = (e)=>{
-        e.preventDefault();
-        console.log(e.target.value);
-        setText(e.target.value);
+        const {value,name} = e.target; //타겟의 name과 value 가져오기
+        console.log(value + " " +name);
+        setInputs({
+            ...inputs, //state의 inputs 객체 복사
+            [name]:value //name => value로 변경
+        });
     }
     //입력값 리셋
     const onReset = ()=>{
-        setText('');
+        setInputs({
+            name:'',
+            nickname:''
+        })
     }
 
     return (
         <div className="func">
-            <input onChange={onChange} value={text}/>
-            <div>
-                <span>입력값 :</span>
-                <span>{text}</span>
+            <input name="name" placeholder="이름" onChange={onChange} value={name} />
+            <input name="nickname" placeholder="닉네임" onChange={onChange} value={nickname}/>
+            <div className="print">
+                <span>이름 : {name}</span>
+                <p/>
+                <span>닉네임 : {nickname}</span>
             </div>
             <button onClick={onReset}>초기화</button>
         </div>
