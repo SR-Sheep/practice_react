@@ -4,6 +4,7 @@ import Subject from './Subject';
 import Toc from './Toc';
 import Content from './Content';
 import Func from './Func';
+import List from './List';
 
 class App extends Component {
   
@@ -73,6 +74,7 @@ class App extends Component {
             .bind(this)
         }>mode 변경</button>
         <Func/>
+        <List/>
       </div>
     );
   }

@@ -1,4 +1,4 @@
-.func{
+.func,.list{
     margin: 20px;
     padding: 10px;
     border: 3px rgb(48, 203, 255) solid;
@@ -31,4 +31,12 @@
 .func button:hover{
     transform: scale(1.1);
     background-color: #525252;
+}
+
+.user b{
+    color: blueviolet;
+}
+
+.user span{
+    color: violet;
 }
