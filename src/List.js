@@ -1,5 +1,4 @@
-import React from "react";
-import { useState,useRef } from "react";
+import React, { useRef } from "react";
 
 function User({user}){
     return(
@@ -28,7 +27,6 @@ function List(){
             nickName : '사람임'
         }
     ]
-
 
     return(
         <div className="list">
