@@ -5,6 +5,7 @@ import Toc from './Toc';
 import Content from './Content';
 import Func from './Func';
 import List from './List';
+import StopWatch from './StopWatch';
 
 class App extends Component {
   
@@ -75,6 +76,7 @@ class App extends Component {
         }>mode 변경</button>
         <Func/>
         <List/>
+        <StopWatch/>
       </div>
     );
   }

@@ -1,0 +1,38 @@
+.stopwatch{
+    width: 200px;
+    height: 100px;
+    border : #37e8ff solid 10px;
+    border-radius: 10px;
+}
+
+.stopwatch_title{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800;
+    margin : 10px;
+}
+
+.timer{
+    text-align: center;
+    font-size: 18px;
+}
+
+.button_wrap{
+    text-align: center;
+}
+.button_wrap button{
+    height: 25px;
+    margin:7px;
+    width: 50px;
+    cursor: pointer;
+    background-color: cyan;
+    border-color: transparent;
+    transition: 0.1s ease;
+}
+.button_wrap button:hover{
+    background-color: darkcyan;
+    color: #fafafa;
+}
+.button_wrap button:active{
+    transform: scale(1.05);
+}
