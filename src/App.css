@@ -49,3 +49,8 @@ button{
     border-color: transparent;
     transition: 0.1s ease;
 }
+
+button:active{
+    transform: scale(1.05);
+}
+
