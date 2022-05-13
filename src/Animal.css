@@ -1,0 +1,31 @@
+#animalWrap{
+    width: 300px;
+    text-align: center;
+    border : 5px solid orange;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+#animalWrap .title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#animalWrap li{
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+    padding-bottom: 5px;
+}
+
+#animalWrap b{
+    color: orangered;
+}
+
+#animalWrap .input_box{
+    margin: 10px;
+}
+
+#animalWrap button{
+    background-color: rgb(255, 102, 0);
+}

@@ -6,6 +6,7 @@ import Content from './Content';
 import Func from './Func';
 import List from './List';
 import StopWatch from './StopWatch';
+import Animal from './Animal';
 
 class App extends Component {
   
@@ -77,6 +78,7 @@ class App extends Component {
         <Func/>
         <List/>
         <StopWatch/>
+        <Animal/>
       </div>
     );
   }
