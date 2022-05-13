@@ -4,19 +4,11 @@ import CreateAnimal from "./CreateAnimal";
 import './Animal.css';
 
 const Animal=()=>{
-    //input의 값
+    //inputs state, 입력
     const [inputs, setInputs] = useState({
         animalType : '',
         sound : ''
     });
-    //변화, 입력값이 바뀌면 inputs state 업데이트
-    const onChange=e=>{
-        const {name,value}=e.target;
-        setInputs({
-            ...inputs,
-            [name]:value
-        });
-    };
 
     //animals state, 동물과 울음소리가 들어있음
     const [animals, setAnimals] = useState([
@@ -38,6 +30,15 @@ const Animal=()=>{
         }
     ]);
 
+    //변화, 입력값이 바뀌면 inputs state 업데이트
+    const onChange=e=>{
+        const {name,value}=e.target;
+        setInputs({
+            ...inputs,
+            [name]:value
+        });
+    };
+    
     const {animalType,sound}=inputs;
 
     //다음 번호 idx
@@ -66,6 +67,13 @@ const Animal=()=>{
         nextId.current++;
     };
 
+    //animals state에 데이터 삭제
+    const onRemove=(id)=>{
+        //id가 일치하지 않은 animals의 데이터만 animals로 다시 세팅
+        setAnimals(animals.filter(animal=>animal.id!=id));
+    }
+
+
     return(
         <div id="animalWrap">
             <div className="title">
@@ -77,7 +85,7 @@ const Animal=()=>{
               onChange={onChange}
               onCreate={onCreate}
             />
-            <AnimalList animals={animals}/>
+            <AnimalList animals={animals} onRemove={onRemove}/>
         </div>
     )
 
