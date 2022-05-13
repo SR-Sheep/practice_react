@@ -40,3 +40,12 @@
 .user span{
     color: violet;
 }
+
+button{
+    height: 25px;
+    margin:7px;
+    width: 50px;
+    cursor: pointer;
+    border-color: transparent;
+    transition: 0.1s ease;
+}
