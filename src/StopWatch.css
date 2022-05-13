@@ -21,13 +21,7 @@
     text-align: center;
 }
 .button_wrap button{
-    height: 25px;
-    margin:7px;
-    width: 50px;
-    cursor: pointer;
     background-color: cyan;
-    border-color: transparent;
-    transition: 0.1s ease;
 }
 .button_wrap button:hover{
     background-color: darkcyan;
