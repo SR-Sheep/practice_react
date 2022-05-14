@@ -22,7 +22,6 @@ function Animal({animal,onRemove,toEditMode}){
 
 
 function AnimalList({animals, onRemove,toEditMode,setAnimals}){
-    console.log("재랜더링으로 재배열됩니다")
     return(
         <ul>
             {animals.map((animal)=>(

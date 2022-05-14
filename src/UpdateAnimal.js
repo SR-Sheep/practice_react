@@ -18,7 +18,6 @@ const UpdateAnimal = ({animal, animals,setAnimals}) => {
     setAnimals(animals.map(ani=>(
         ani.id===animal.id?{...updateAnimal,mode:false}:ani
     )));
-    
   }
 
     return (
