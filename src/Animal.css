@@ -1,6 +1,6 @@
 #animalWrap{
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     text-align: center;
     border : 5px solid orange;
     padding: 10px;
@@ -15,7 +15,7 @@
 #animalWrap li{
     text-align: left;
     list-style: none;
-    padding-left: 0;
+    padding: 0;
     padding-bottom: 5px;
 }
 
@@ -39,3 +39,15 @@
     color: #fafafa;
 }
 
+#animalWrap .inline_box{
+    float: left;
+}
+
+#animalWrap .update_wrap button{
+    height: 50px;
+    margin-top : 15px;
+}
+
+#animalWrap li{
+    clear : both;
+}

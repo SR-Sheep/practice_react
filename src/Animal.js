@@ -7,7 +7,8 @@ const Animal=()=>{
     //inputs state, 입력
     const [inputs, setInputs] = useState({
         animalType : '',
-        sound : ''
+        sound : '',
+        mode : false
     });
 
     //animals state, 동물과 울음소리가 들어있음
@@ -15,17 +16,20 @@ const Animal=()=>{
         {
             id : 1,
             animalType : '고양이',
-            sound : '야옹'
+            sound : '야옹',
+            mode : false
         },
         {
             id : 2,
             animalType : '강아지',
-            sound : '멍멍'
+            sound : '멍멍',
+            mode : false
         },
         {
             id : 3,
             animalType : '닭',
-            sound : '꼬꼬댁'
+            sound : '꼬꼬댁',
+            mode : false
 
         }
     ]);
@@ -50,7 +54,8 @@ const Animal=()=>{
             //nextId는 ref를 이용하여 랜더링되어도 변하지 않음
             id:nextId.current,
             animalType,
-            sound
+            sound,
+            mode:false
         }
         //input 초기화
         setInputs({
@@ -62,7 +67,6 @@ const Animal=()=>{
         //setAnimals(animals.concat(animal));
         //spread 연산자, 배열을 복사하고 여기에 +시킴
         setAnimals([...animals,animal]);
-        console.log(animals);
         //id 증가
         nextId.current++;
     };
@@ -70,7 +74,13 @@ const Animal=()=>{
     //animals state에 데이터 삭제
     const onRemove=(id)=>{
         //id가 일치하지 않은 animals의 데이터만 animals로 다시 세팅
-        setAnimals(animals.filter(animal=>animal.id!=id));
+        setAnimals(animals.filter(animal=>animal.id!==id));
+    }
+
+    //수정모드 전환
+    const toEditMode=(id)=>{
+        //id 일치하지 않으면 mode false, 일치하면 mode true
+        setAnimals(animals.map(animal=>animal.id===id?{...animal,mode:true}:{...animal,mode:false}));
     }
 
 
@@ -85,7 +95,11 @@ const Animal=()=>{
               onChange={onChange}
               onCreate={onCreate}
             />
-            <AnimalList animals={animals} onRemove={onRemove}/>
+            <AnimalList 
+                animals={animals}
+                onRemove={onRemove}
+                toEditMode={toEditMode}
+                setAnimals={setAnimals}/>
         </div>
     )
 
